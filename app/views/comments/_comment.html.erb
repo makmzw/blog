@@ -4,9 +4,13 @@
 		<p class="comment_body"><%= comment.body %></p>
 		<p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
 	</div>
-	<p><%= link_to '削除', [comment.post, comment],
-	  method: :delete,
-	  class: "button",
-	  data: { confirm: '削除しますか？' } %>
+	
+	<% if user_signed_in? %>
+	  <p><%= link_to '削除', [comment.post, comment],
+	    method: :delete,
+	    class: "button",
+	    data: { confirm: '削除しますか？' } %>
 	  </p>
+	  <% end %>
+	 
 </div>
