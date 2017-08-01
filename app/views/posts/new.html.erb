@@ -1,6 +1,7 @@
-<h1>新規投稿</h1>
-
-<%= form_for :post, url: posts_path do |f| %>
+<div id="page_wrapper">
+  <h1>新規投稿</h1>
+  
+  <%= form_for :post, url: posts_path do |f| %>
   <p>
   <%= f.label :title %><br>
   <%= f.text_field :title %>
@@ -15,3 +16,4 @@
     <%= f.submit %>
   </p>
 <% end %>
+</div>
