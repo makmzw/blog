@@ -53,6 +53,16 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.3'
 
+group :development, :test do
+	gem 'sqlite3'
+	gem 'spring'
+end
+
 group :production do
-  gem 'pg'
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :doc do
+	gem 'sdoc', '~> 0.4.0'
 end
